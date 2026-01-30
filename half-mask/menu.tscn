@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cxb31ypls4kaj"]
+
+[node name="MENU" type="Control" unique_id=783857370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cor da tela" type="ColorRect" parent="." unique_id=1208444793]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1785384770]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "HA-LF MASK"
