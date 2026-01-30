@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://87l6krskog8d"
-path="res://.godot/imported/button_exit.png-aa947f49ed8e7623802703c2b81d07de.ctex"
+uid="uid://c635be63oolqe"
+path="res://.godot/imported/inimigo_magic.png-b8e1f3d689f95d1b11077dc8eeec4b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://button_exit.png"
-dest_files=["res://.godot/imported/button_exit.png-aa947f49ed8e7623802703c2b81d07de.ctex"]
+source_file="res://Sprites/Inimigo/inimigo_magic.png"
+dest_files=["res://.godot/imported/inimigo_magic.png-b8e1f3d689f95d1b11077dc8eeec4b93.ctex"]
 
 [params]
 

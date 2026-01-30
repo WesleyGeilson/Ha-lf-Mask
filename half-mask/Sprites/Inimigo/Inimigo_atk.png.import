@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dguid37f654a4"
-path="res://.godot/imported/button_play.png-b099241225a0ca647d43381d75c26bc7.ctex"
+uid="uid://fhf6djwidmtu"
+path="res://.godot/imported/Inimigo_atk.png-a92a2d8cde25773c713d4bdf53da95d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://button_play.png"
-dest_files=["res://.godot/imported/button_play.png-b099241225a0ca647d43381d75c26bc7.ctex"]
+source_file="res://Sprites/Inimigo/Inimigo_atk.png"
+dest_files=["res://.godot/imported/Inimigo_atk.png-a92a2d8cde25773c713d4bdf53da95d8.ctex"]
 
 [params]
 
