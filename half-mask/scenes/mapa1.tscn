@@ -396,6 +396,7 @@ tile_map_data = PackedByteArray("AAAAAAwAAgAMAAUAAAABAAwAAgAMAAUAAAACAAwAAgAMAAU
 tile_set = SubResource("TileSet_gvr3l")
 
 [node name="player" parent="terrenos" unique_id=373574033 instance=ExtResource("7_dvh7s")]
+position = Vector2(33, 173)
 
 [node name="LevelEnd" parent="." unique_id=1118137668 instance=ExtResource("13_0g8r3")]
 position = Vector2(425, 174)
@@ -403,11 +404,5 @@ script = null
 
 [node name="CollisionShape2D" parent="LevelEnd" index="0" unique_id=1416020313]
 position = Vector2(0, -22.5)
-
-[node name="camera" parent="." unique_id=1338590590]
-limit_left = 11
-limit_top = -9999998
-limit_right = 431
-limit_bottom = 210
 
 [editable path="LevelEnd"]
