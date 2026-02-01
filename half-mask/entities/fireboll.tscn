@@ -23,8 +23,6 @@ animations = [{
 
 [node name="fireboll" type="Area2D" unique_id=665381530]
 position = Vector2(20, 0)
-collision_layer = 16
-collision_mask = 3
 script = ExtResource("1_rec6h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=397651263]

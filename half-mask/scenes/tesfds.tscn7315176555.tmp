@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cryqxwhacv8k6"]
+
+[ext_resource type="PackedScene" uid="uid://c1c6uaca7u1sx" path="res://entities/player.tscn" id="1_t5wcj"]
+[ext_resource type="PackedScene" uid="uid://7fkoqmdrpsbl" path="res://entities/enemy.tscn" id="2_hown7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hown7"]
+size = Vector2(1343, 218)
+
+[node name="Tesfds" type="Node2D" unique_id=869088109]
+
+[node name="player" parent="." unique_id=373574033 instance=ExtResource("1_t5wcj")]
+position = Vector2(54.99997, 192.00002)
+scale = Vector2(5.490909, 3.4299996)
+
+[node name="enemy" parent="." unique_id=199663345 instance=ExtResource("2_hown7")]
+position = Vector2(581, 184)
+scale = Vector2(4.6600003, 6.7600007)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=948789346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1763403877]
+position = Vector2(209.5, 392)
+shape = SubResource("RectangleShape2D_hown7")
