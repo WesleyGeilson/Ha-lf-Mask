@@ -94,4 +94,5 @@ flat = true
 script = ExtResource("5_q0rrb")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Botão _Jogar_/start" to="Botão _Jogar_/start" method="_on_pressed"]
+[connection signal="pressed" from="Botão _Jogar_/start" to="Botão _Jogar_/start" method="_on_start_pressed"]
+[connection signal="pressed" from="Botão _sair/exit" to="Botão _sair/exit" method="_on_exit_pressed"]

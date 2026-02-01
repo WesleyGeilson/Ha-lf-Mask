@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bwq0bddyf117x"]
+
+[ext_resource type="Texture2D" uid="uid://dt4kx4l27kmyi" path="res://sprites/magic_mask.png" id="1_xqcel"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qksgq"]
+radius = 91.0
+height = 292.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haehw"]
+atlas = ExtResource("1_xqcel")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wla76"]
+atlas = ExtResource("1_xqcel")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upytj"]
+atlas = ExtResource("1_xqcel")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fd5h"]
+atlas = ExtResource("1_xqcel")
+region = Rect2(0, 30, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4j3xo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haehw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wla76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upytj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fd5h")
+}],
+"loop": true,
+"name": &"mask",
+"speed": 4.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=137023643]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=689417215]
+position = Vector2(38, 334)
+shape = SubResource("CapsuleShape2D_qksgq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=744939799]
+position = Vector2(0.99999976, -3)
+scale = Vector2(4.5000005, 4.2999997)
+sprite_frames = SubResource("SpriteFrames_4j3xo")
+animation = &"mask"
+autoplay = "mask"
+frame_progress = 0.9552726

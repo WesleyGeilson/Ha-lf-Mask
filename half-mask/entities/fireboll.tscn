@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bhen4n4gjheop"]
+
+[ext_resource type="Script" path="res://scripts/fireboll.gd" id="1_rec6h"]
+[ext_resource type="Texture2D" uid="uid://c635be63oolqe" path="res://Sprites/Inimigo/inimigo_magic.png" id="2_rec6h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rec6h"]
+radius = 8.062258
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giqmi"]
+atlas = ExtResource("2_rec6h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xa6du"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giqmi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="fireboll" type="Area2D" unique_id=665381530]
+position = Vector2(20, 0)
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("1_rec6h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=397651263]
+shape = SubResource("CircleShape2D_rec6h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1021147988]
+position = Vector2(3, 1)
+sprite_frames = SubResource("SpriteFrames_xa6du")
+autoplay = "default"
+frame_progress = 0.0004808111
+
+[node name="SelfDestructTimer" type="Timer" parent="." unique_id=708490344]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="SelfDestructTimer" to="." method="_on_self_destruct_timer_timeout"]

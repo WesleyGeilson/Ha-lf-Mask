@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 #quando pressidonado aqui, basicamente vai redirecionar para a cena estabelecida, do video que eu aprendi no yt
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://player.tscn")
+	get_tree().change_scene_to_file("res://scenes/mapa1.tscn")

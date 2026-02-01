@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cxsrc7e56acvd"]
+
+[ext_resource type="Script" uid="uid://bc02ekdrn1mw1" path="res://scripts/flecha.gd" id="1_86xb0"]
+[ext_resource type="Texture2D" uid="uid://nw6ql3yitgpl" path="res://Sprites/Inimigo/flecha.png" id="2_77hji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x33c6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0iqbx"]
+atlas = ExtResource("2_77hji")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_101tq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0iqbx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Flecha" type="Area2D" unique_id=573730374]
+script = ExtResource("1_86xb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1061137817]
+shape = SubResource("RectangleShape2D_x33c6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1237745934]
+rotation = -1.567008
+sprite_frames = SubResource("SpriteFrames_101tq")
+
+[node name="SelfDestructTimer" type="Timer" parent="." unique_id=1344190434]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="SelfDestructTimer" to="." method="_on_self_destruct_timer_timeout"]
